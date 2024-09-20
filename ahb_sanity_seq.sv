@@ -37,4 +37,5 @@ class ahb_seq1 extends uvm_sequence#(seq_item); //test case with transfer type=N
     finish_item(seq2);
     end
     
-  endtask
+                   endtask
+      endclass
