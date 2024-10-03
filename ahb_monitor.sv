@@ -1,7 +1,7 @@
 class monitor extends uvm_monitor;
     `uvm_component_utils("monitor")
 
-    virtual interface vif;
+    virtual intf vif;
     tb_cfg cfg;
     uvm_analysis_port#(txn)mon_port;
     transaction txn;
@@ -17,7 +17,7 @@ class monitor extends uvm_monitor;
     endfunction
     function connect_phase(uvm_phase phase);
         super.connect_phase();
-        if(!uvm_config_db#(virtual interface)::get("this","","vif_cfg",cfg))
+        if(!uvm_config_db#(virtual intf)::get("this","","vif_cfg",cfg))
             `uvm_error("Failed");
         else
             this.vif=cfg.vif;
