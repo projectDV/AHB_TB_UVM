@@ -19,7 +19,7 @@ class ahb_sb extends uvm_scoreboard;
   task run_phase(uvm_phase phase);
     ap_sb.get(txn);//monitor->sb
     txn.copy(ref_txn)//reference_txn
-    ref(txn);//expected
+    ref(ref_txn);//expected
     compare(txn);
   endtask
   //ref_model
