@@ -23,7 +23,7 @@ class monitor extends uvm_monitor;
             this.vif=cfg.vif;
     endfunction
     virtual task run_phase(uvm_phase phase);
-        forver begin
+        forever begin
         @(vif.mon_cb);
         seq_item_port.get_next_item(tnx);
         if(read)
