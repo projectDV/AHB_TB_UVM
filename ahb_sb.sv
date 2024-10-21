@@ -3,7 +3,7 @@ class ahb_sb extends uvm_scoreboard;
   //fact_reg
   `uvm_component_utils(ahb_sb)
   //analysis port
-  `uvm_analysis_import#(txn,ahb_sb)ap_sb;
+  uvm_analysis_import#(txn,ahb_sb)ap_sb;
   seq_item txn, ref_txn;
   int mem[int];//sparse arr
   //construct and phases
